@@ -1,45 +1,45 @@
 # Dijkstra Shortest Path Algorithm (Python)
 
-## 📌 Overview
+##  Overview
 This project implements **Dijkstra’s Shortest Path Algorithm** in Python for an **undirected weighted graph**.  
 The program allows users to input graph details (nodes, edges, and weights) and then computes the shortest path distances from a chosen source node to all other nodes.
 
-## 📘 Features
+##  Features
 - Uses **adjacency list** representation for the graph.
 - Implements Dijkstra using a **min-heap priority queue** (`heapq`).
 - Supports **undirected weighted graphs**.
 - Fully interactive, user-input driven.
 - Outputs shortest distance from the source to every node.
 
-## 🧠 How It Works
+##  How It Works
 
-### 1️⃣ Graph Construction
+### 1️ Graph Construction
 The program stores the graph using Python’s `defaultdict(list)`:
 node → [(neighbor, weight), ...]
 
-### 2️⃣ Distance Initialization
+### 2️ Distance Initialization
 - A `distances` array is created with all values set to `∞`.
 - The distance of the **source node** is set to `0`.
 
-### 3️⃣ Priority Queue (Min-Heap)
+### 3️ Priority Queue (Min-Heap)
 The algorithm uses:
 (priority_queue) = [(distance, node)]
 `heapq` ensures the node with minimum current distance is always extracted first.
 
-### 4️⃣ Relaxation Process
+### 4️ Relaxation Process
 For every neighbor of the current node:
 new_distance = current_dist + weight
 if new_distance < distances[neighbor]:
 update distances[neighbor]
 push (new_distance, neighbor) into heap
 
-### 5️⃣ Output
+### 5️ Output
 After processing all nodes, the program prints:
 Node i: shortest_distance
 
 ---
 
-## 📦 Required Libraries
+##  Required Libraries
 This program uses only **built-in Python libraries**, so no installations are needed.
 
 Imported modules:
@@ -48,7 +48,7 @@ Imported modules:
 
 ---
 
-## ▶️ Usage
+##  Usage
 
 ### **Run the program**
 ```bash
